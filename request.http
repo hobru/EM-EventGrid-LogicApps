@@ -2,11 +2,11 @@ GET http://microsoft.1c5ba676trial.authentication.us10.hana.ondemand.com/oauth/t
 
 ###
 
-@tokenendpoint = https://1c5ba676trial.authentication.us10.hana.ondemand.com/oauth/token 
-@clientid = sb-clone-xbem-service-broker-e4765fd125ee4b47a0a16d2121c53b51-clone!b6928|xbem-service-broker-!b732
-@clientsecret = 359f1170-cf25-4f68-b53c-48ca3e2fc290$iQn2WIW91tddV9EJ4kOccTs9ldAUUXz2Nt1hGdheFyw=
-@uri = https://enterprise-messaging-pubsub.cfapps.us10.hana.ondemand.com
-@queuname = emQueue
+@tokenendpoint = <tokenEndPoint> 
+@clientid = <clientid>
+@clientsecret = <secret>
+@uri = <URI>
+@queuname = <Queue>
 
 # @name login
 POST {{tokenendpoint}}?grant_type=client_credentials&response_type=token
@@ -19,15 +19,15 @@ Content-Type: application/cloudevents+json; charset=utf-8
 x-qos: 0
 
 {
-    "id": "111",
-    "eventType": "recordInserted",
-    "subject": "myapp/vehicles/motorcycles",
+    "id": "123",
+    "eventType": "information",
+    "subject": "hbr/poc/somedata",
     "data": {
-      "make": "Ducati-2020-05-29",
-      "model": "Monster"
+      "lastname": "Bruchelt",
+      "firstname": "Holger"
     },
     "dataVersion": "1.0",
     "metadataVersion": "1",
-    "eventTime": "2020-05-13T13:13:16+00:00",
-    "topic": "/subscriptions/0ec17bc6-393d-4582-8d29-02988d4c5831/resourceGroups/hbrSendGridRG/providers/Microsoft.EventGrid/topics/seondTopic"
+    "eventTime": "2020-06-07T12:00:00+00:00",
+    "topic": "/hbr/poc/enterprisemessaging/eventgrid"
 }
