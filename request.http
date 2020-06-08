@@ -19,15 +19,12 @@ Content-Type: application/cloudevents+json; charset=utf-8
 x-qos: 0
 
 {
-    "id": "123",
-    "eventType": "information",
-    "subject": "hbr/poc/somedata",
     "data": {
       "lastname": "Bruchelt",
       "firstname": "Holger"
     },
-    "dataVersion": "1.0",
-    "metadataVersion": "1",
-    "eventTime": "2020-06-07T12:00:00+00:00",
-    "topic": "/hbr/poc/enterprisemessaging/eventgrid"
+  "specversion": "1.0",
+  "type": "information",
+  "source": "/hbr/poc/enterprisemessaging/eventgrid",
+  "id": "123"
 }
