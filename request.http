@@ -1,4 +1,4 @@
-GET http://microsoft.1c5ba676trial.authentication.us10.hana.ondemand.com/oauth/token?grant_type=client_credentials&response_type=token
+GET http://microsoft.com
 
 ###
 
